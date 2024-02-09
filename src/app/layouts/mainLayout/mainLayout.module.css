@@ -1,7 +1,7 @@
 .container {
     height: 100%;
     display: grid; 
-    grid-template-columns: 280px 1fr; 
+    grid-template-columns: 260px 1fr; 
     grid-template-rows: 80px 1fr; 
     gap: 0px 0px; 
     grid-template-areas: 
@@ -11,19 +11,19 @@
 
 .header {
   grid-area: header;
-  background-color: red;
+  background-color: gray;
 }
 
 .sidebar {
   grid-area: sidebar;
   max-height: 100%;
   overflow-y: auto;
-  background-color: green;
+  background-color: #30373f;
 }
 
 .body {
   grid-area: body;
+  padding: 20px;
   max-height: 100%;
   overflow-y: auto;
-  background-color: blue;
 }
