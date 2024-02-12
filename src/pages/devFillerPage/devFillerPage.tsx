@@ -1,10 +1,8 @@
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import Typography from "@mui/material/Typography";
+import { Box, Card, CardContent, Typography } from "@mui/material";
 
-export const DevFillerPage = () => {
+export const DevelopmentPage = () => {
   return (
-    <>
+    <Box>
       {Array.from(Array(50).keys()).map(() => {
         return (
           <>
@@ -15,13 +13,13 @@ export const DevFillerPage = () => {
                   color="text.secondary"
                   gutterBottom
                 >
-                  Word of the Day
+                  Some Word
                 </Typography>
               </CardContent>
             </Card>
           </>
         );
       })}
-    </>
+    </Box>
   );
 }
