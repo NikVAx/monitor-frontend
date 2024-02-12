@@ -15,24 +15,26 @@ export function LoginPage() {
     <div className={s.container}>
       <div className={s.bgImage}></div>
       <div className={s.formContainer}>
-        <Paper elevation={3} className={s.formContent}>
-          <Typography>
-            Login
+        <Paper elevation={0} className={s.formContent}>
+          <Typography variant="h4" marginBottom="20px">
+            Вход в систему
           </Typography>
 
           <TextField      
             id="outlined-required"
-            label="Username"
+            label="Имя пользователя"
             defaultValue=""
             autoComplete="off"
             value={username}
+            margin="dense"
             onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
               setUsername(event.target.value);
             }}
           />
           <TextField
+            margin="dense"
             id="outlined-password-input"
-            label="Password"
+            label="Пароль"
             type="password"
             autoComplete="new-password"
             value={password}
@@ -40,7 +42,7 @@ export function LoginPage() {
               setPassword(event.target.value);
             }}
           />
-          <Button variant="text" onClick={
+          <Button variant="contained" sx={{marginTop: "30px"}} onClick={
             () => {
               const loginResult = AuthService.login(username, password);
 
@@ -48,9 +50,8 @@ export function LoginPage() {
                 navigate("/")
               }
             }
-
           }>
-              Login
+              Войти
           </Button>
         </Paper>
       </div>
